@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="300.0" minWidth="500.0" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlFX">
+   <children>
+      <BorderPane prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane stylesheets="@../application.css" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="228.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="132.0" minHeight="7.0" prefHeight="103.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@../../../../JavaJFXAnexo/src/assets/profilephoto.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.2" />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets top="75.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="138.0" prefWidth="213.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleClose" onMouseClicked="#handleSend" style="-fx-background-color: orange; -fx-text-fill: white;" stylesheets="@../application.css" text="Exit">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#8d7b31" height="0.0" radius="7.8475" width="33.39" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <tooltip>
+                                    <Tooltip text="Do you know me?" />
+                                 </tooltip>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#showSendProfile" onMouseClicked="#handleSend" style="-fx-background-color: orange; -fx-text-fill: white;" stylesheets="@../application.css" text="Get me">
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" color="#8d7b31" height="0.0" radius="7.8475" width="33.39" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <tooltip>
+                                    <Tooltip text="Do you know me?" />
+                                 </tooltip></Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Text fill="#6f6f6f" strokeType="OUTSIDE" strokeWidth="0.0" text="My profile" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="50.0" top="40.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text fill="#a1a0a0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jay R.">
+                           <VBox.margin>
+                              <Insets left="90.0" top="120.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#838383" strokeType="OUTSIDE" strokeWidth="0.0" text="Programmers can design">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                  </VBox>
+                  <ImageView fitHeight="70.0" fitWidth="640.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../JavaJFXAnexo/src/assets/blueforest.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="18.0" prefWidth="640.0" style="-fx-background-color: #0B614B;" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
